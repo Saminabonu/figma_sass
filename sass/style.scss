@@ -1,0 +1,202 @@
+$primary_color: white;
+$second_color: #48924F;
+$third_color: #828282;
+$fourth_color: #0D4D14;
+$five_color: #4DB96B;
+$six_color: #6CB981;
+/*color*/
+
+$bg_color_rgba: rgba(0, 0, 0, 0.5);
+$bg_color_radial: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F9F9F9 100%);
+$bg_color_white: #FFFFFF;
+$bg_color_contact_us: #9FDEA9;
+$bg_color_footer: #324B29;
+/*background_color*/
+
+$font_family: 'Poppins', 'sans-serif';
+/*font_family*/
+
+$f_weight_900: 900;
+$f_weight_500: 500;
+$f_weight_700: 700;
+$f_weight_800: 800;
+$f_weight_400: 400;
+$f_weight_600: 600;
+/*Font_weight*/
+
+$l_height_21: 21px;
+$l_height_27: 27px;
+$l_height_17: 17px;
+$l_height_96: 96px;
+$l_height_22: 22px;
+$l_height_24: 24px;
+$l_height_20: 20px;
+$l_height_134: 134px;
+/*line_height*/
+
+
+$font_size_60: 60px;
+$font_size_144: 144px;
+$font_size_18: 18px;
+$font_size_64: 64px;
+$font_size_16: 16px;
+$font_size_14: 14px;
+/*font_size*/
+
+$bg_image: url("../img/green.jpg");
+$bg_image_flowers: url("../img/flowers.png");
+$bg_image_footer: url("../img/footer.png");
+$bg_image_girl: url("../img/girl.png");
+$bg_image_grass: url("../img/grass.png");
+$bg_image_yard: url("../img/yard.png");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*header*/
+header{
+    background-image: $bg_image;  
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 70px;
+
+    .nav_img {
+        margin-top: 58px;
+        margin-bottom: 50px;
+    }
+
+    .nav_btn button {
+        width: 374px;
+        height: 64px;
+        border-radius: 59px;
+        background-color: $bg_color_rgba;
+        color: $primary_color;
+        font-size: $font_size_18;
+        font-family: $font_family;
+        font-weight: $f_weight_500;
+        line-height: $l_height_27;
+        margin-bottom: 17px;
+    }
+
+    h1 {
+        color: $primary_color;
+        font-family: $font_family;
+        font-size: $font_size_144;
+        font-weight: $f_weight_900;
+        line-height: $l_height_134;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .btn_help button {
+        width: 180px;
+        height: 70px;
+        background-color: $bg_color_radial;
+        box-shadow: 0px 10px 50px rgba(16, 51, 30, 0.5);
+        border-radius: 35px;
+        font-family: $font_family;
+        font-size: $font_size_18;
+        font-weight: $f_weight_700;
+        line-height: $l_height_27;
+        color: $second_color;
+        margin-bottom: 116px;
+    }
+
+}
+
+/*Services_section*/
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.services_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    h1 {
+
+        width: 284px;
+        height: 96px;
+        font-family: $font_family;
+        font-size: $font_size_64;
+        font-weight: $f_weight_800;
+        line-height: $l_height_96;
+        color: $third_color;
+        text-align: center;
+    }
+
+    .grass {
+        position: absolute;
+        top: 50px;
+        left: 450px;
+    }
+}
+
+.services_cards {
+    display: flex;
+    gap: 22px;
+
+    .card {
+        width: 385px;
+        height: 504px;
+        display: flex;
+        flex-direction: column;
+        background-color: $primary_color;
+        box-shadow: 0px 10px 30px rgba(16, 51, 30, 0.1);
+        border-radius: 30px;
+
+       
+    }
+    .card .top_side {
+        width: 385px;
+        height: 290px;
+        background-image: $bg_image_grass;
+    }
+    .card:nth-child(2) .top_side{
+        background-image: $bg_image_flowers;
+    }
+    .card:nth-child(3) .top_side{
+        background-image: $bg_image_yard;
+    }
+    .card .bottom_side{
+        padding: 30px;
+    }
+    .card .bottom_side h3{
+        font-family: $font_family;
+        font-size: $font_size_16;
+        font-weight: $f_weight_900;
+        line-height: $l_height_24;
+        color: $fourth_color;
+        margin-bottom: 10px;
+    }
+    .card .bottom_side p{
+        font-family: $font_family;
+        font-size: $font_size_14;
+        font-weight: $f_weight_400;
+        line-height: $l_height_20;
+        color: $fourth_color;
+        
+    }
+}
